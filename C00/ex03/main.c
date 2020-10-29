@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/22 16:34:28 by afernand          #+#    #+#             */
-/*   Updated: 2020/10/22 23:38:39 by afernand         ###   ########.fr       */
+/*   Created: 2020/10/22 22:24:55 by afernand          #+#    #+#             */
+/*   Updated: 2020/10/22 22:25:30 by afernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+void ft_print_numbers(void);
+int main(void)
 {
-	write(1, &c, 1);
+        ft_print_numbers();
+        return 0;
 }

@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/22 16:34:28 by afernand          #+#    #+#             */
-/*   Updated: 2020/10/22 23:38:39 by afernand         ###   ########.fr       */
+/*   Created: 2020/10/27 21:25:41 by afernand          #+#    #+#             */
+/*   Updated: 2020/10/28 18:09:57 by afernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	write(1, &c, 1);
+	int quotient;
+	int remainder;
+
+	quotient = *a / *b;
+	remainder = *a % *b;
+	*a = quotient;
+	*b = remainder;
 }

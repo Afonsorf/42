@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/22 16:34:28 by afernand          #+#    #+#             */
-/*   Updated: 2020/10/22 23:38:39 by afernand         ###   ########.fr       */
+/*   Created: 2020/10/29 12:26:10 by afernand          #+#    #+#             */
+/*   Updated: 2020/10/29 17:29:49 by afernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+char *ft_strcpy(char *dest, char *src)
 {
-	write(1, &c, 1);
+	int i;
+
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+
+	dest[i] = '\0';
+	return (dest);
 }
