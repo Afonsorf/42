@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_capitalize.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/29 17:55:51 by afernand          #+#    #+#             */
-/*   Updated: 2020/10/30 01:09:32 by afernand         ###   ########.fr       */
+/*   Created: 2020/10/30 16:41:55 by afernand          #+#    #+#             */
+/*   Updated: 2020/10/30 16:48:37 by afernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strncpy(char *dest, char *src, unsigned int n)
+char	*ft_capitalize(char *str)
 {
 	int i;
 
 	i = 0;
-	while (src[i] != '\0' && i < n)
+	while (str[i] != '\0')
 	{
-		dest[i] = src[i];
+
+		// falta considcoes para ver se e upper, lower, nuero etc mas funciona!
+		if(str[i] == ' ')
+		{
+			str[i + 1] += 32;
+		}
 		i++;
 	}
-
-	dest[i] = '\0';
-	return (dest);
+	return (str);
 }

@@ -12,8 +12,11 @@ int		main(void)
 	printf("this is string 2: %s\n", str2);
 
 	*str2 = *ft_strcpy(str2, str1);
+	
+	//*str2 = *strcpy(str2, str1);
 
 	printf("this is the source: %s\n", str1);
 	printf("this is string 2: %s\n", str2);
+
 
 }

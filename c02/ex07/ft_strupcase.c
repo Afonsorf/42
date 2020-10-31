@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/29 17:55:51 by afernand          #+#    #+#             */
-/*   Updated: 2020/10/30 01:09:32 by afernand         ###   ########.fr       */
+/*   Created: 2020/10/30 14:12:37 by afernand          #+#    #+#             */
+/*   Updated: 2020/10/30 15:27:44 by afernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-char *ft_strncpy(char *dest, char *src, unsigned int n)
+char	*ft_strupcase(char *str)
 {
 	int i;
 
 	i = 0;
-	while (src[i] != '\0' && i < n)
+	while (str[i] != '\0')
 	{
-		dest[i] = src[i];
+		if(str[i] >= 97 && str[i] <= 122)
+		{
+			str[i] -= 32;			
+		}
 		i++;
 	}
-
-	dest[i] = '\0';
-	return (dest);
+	return (str);
 }

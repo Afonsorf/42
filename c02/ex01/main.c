@@ -14,12 +14,12 @@ int		main(void)
 	printf("this is string 2: %s\n", str2);
 	printf("this is n: %i\n", n);
 
-	//*str2 = *ft_strncpy(str2, str1, n);
-	//	printf("this is the source: %s\n", str1);
-	//printf("this is string 2: %s\n", str2);
-
-	*str2 = *strncpy(str2, str1, n);
+	*str2 = *ft_strncpy(str2, str1, n);
 	printf("this is the source: %s\n", str1);
 	printf("this is string 2: %s\n", str2);
+
+	//*str2 = *strncpy(str2, str1, n);
+	//printf("this is the source: %s\n", str1);
+	//printf("this is string 2: %s\n", str2);
 
 }

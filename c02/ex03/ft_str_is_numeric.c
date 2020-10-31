@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/29 17:55:51 by afernand          #+#    #+#             */
-/*   Updated: 2020/10/30 01:09:32 by afernand         ###   ########.fr       */
+/*   Created: 2020/10/30 11:31:43 by afernand          #+#    #+#             */
+/*   Updated: 2020/10/30 12:01:55 by afernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strncpy(char *dest, char *src, unsigned int n)
+int ft_str_is_numeric(char *str)
 {
 	int i;
 
 	i = 0;
-	while (src[i] != '\0' && i < n)
+	while (str[i] != '\0')
 	{
-		dest[i] = src[i];
-		i++;
+		if(str[i] >= '0' && str[i] <= '9')
+			i++;
+
+		else
+			return (0);
 	}
 
-	dest[i] = '\0';
-	return (dest);
+	return (1);
 }
