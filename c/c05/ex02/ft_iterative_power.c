@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afernand <afernand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/03 19:21:23 by afernand          #+#    #+#             */
-/*   Updated: 2020/11/04 14:51:59 by afernand         ###   ########.fr       */
+/*   Created: 2020/11/04 15:01:34 by afernand          #+#    #+#             */
+/*   Updated: 2020/11/04 16:47:08 by afernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-void ft_putnbr_base(int nbr, char *base);
-
-int main(void)
+int	ft_iterative_power(int nb, int power)
 {
-	int nbr;
-	char *base;
+	int i;
+	int result;
 
-	nbr = 10;
-	base = "0123456789ABCDEF";
-	ft_putnbr_base(nbr, base);
-	
-	return 0;
+	result = 1;
+	i = 1;
+	if (power < 0)
+		return (0);
+
+	else
+		while (i <= power)
+		{
+			result *= nb;
+			i++;
+		}
+	return (result);
 }

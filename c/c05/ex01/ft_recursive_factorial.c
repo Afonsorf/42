@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afernand <afernand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/03 19:21:23 by afernand          #+#    #+#             */
-/*   Updated: 2020/11/04 14:51:59 by afernand         ###   ########.fr       */
+/*   Created: 2020/11/04 16:09:46 by afernand          #+#    #+#             */
+/*   Updated: 2020/11/04 16:17:34 by afernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-void ft_putnbr_base(int nbr, char *base);
-
-int main(void)
+int	ft_recursive_factorial(int nb)
 {
-	int nbr;
-	char *base;
-
-	nbr = 10;
-	base = "0123456789ABCDEF";
-	ft_putnbr_base(nbr, base);
-	
-	return 0;
+	if (nb == 0)
+		return (1);
+	else
+		while (nb > 0)
+			return (nb * ft_recursive_factorial(nb - 1));
+	return (0);
 }

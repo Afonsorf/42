@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afernand <afernand@student.42.fr>          +#+  +:+       +#+        */
+/*   By: afernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/03 19:21:23 by afernand          #+#    #+#             */
-/*   Updated: 2020/11/04 14:51:59 by afernand         ###   ########.fr       */
+/*   Created: 2020/10/28 10:57:26 by afernand          #+#    #+#             */
+/*   Updated: 2020/10/28 18:28:23 by afernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-void ft_putnbr_base(int nbr, char *base);
-
-int main(void)
+int	ft_strlen(char *str)
 {
-	int nbr;
-	char *base;
+	int s;
 
-	nbr = 10;
-	base = "0123456789ABCDEF";
-	ft_putnbr_base(nbr, base);
-	
-	return 0;
+	s = 0;
+	while (str[s] != '\0')
+	{
+		s++;
+	}
+	return (s);
 }

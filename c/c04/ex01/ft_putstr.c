@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afernand <afernand@student.42.fr>          +#+  +:+       +#+        */
+/*   By: afernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/03 19:21:23 by afernand          #+#    #+#             */
-/*   Updated: 2020/11/04 14:51:59 by afernand         ###   ########.fr       */
+/*   Created: 2020/10/27 22:57:33 by afernand          #+#    #+#             */
+/*   Updated: 2020/10/28 18:11:10 by afernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-void ft_putnbr_base(int nbr, char *base);
-
-int main(void)
+void	ft_putstr(char *str)
 {
-	int nbr;
-	char *base;
+	char c;
 
-	nbr = 10;
-	base = "0123456789ABCDEF";
-	ft_putnbr_base(nbr, base);
-	
-	return 0;
+	while (*str != '\0')
+	{
+		c = *str;
+		write(1, &c, 1);
+		str++;
+	}
 }

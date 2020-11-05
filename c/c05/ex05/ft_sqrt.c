@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afernand <afernand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/03 19:21:23 by afernand          #+#    #+#             */
-/*   Updated: 2020/11/04 14:51:59 by afernand         ###   ########.fr       */
+/*   Created: 2020/11/04 15:01:34 by afernand          #+#    #+#             */
+/*   Updated: 2020/11/05 01:34:38 by afernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-void ft_putnbr_base(int nbr, char *base);
-
-int main(void)
+int	ft_sqrt(int nb)
 {
-	int nbr;
-	char *base;
+	int i;
 
-	nbr = 10;
-	base = "0123456789ABCDEF";
-	ft_putnbr_base(nbr, base);
-	
-	return 0;
+	i = 0;
+	if (nb <= 0)
+		return (0);
+	else
+		while (i * i < nb && i < 46340)
+			i++;
+	return (i);
 }

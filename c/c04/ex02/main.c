@@ -3,25 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afernand <afernand@student.42.fr>          +#+  +:+       +#+        */
+/*   By: afernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/03 19:21:23 by afernand          #+#    #+#             */
-/*   Updated: 2020/11/04 14:51:59 by afernand         ###   ########.fr       */
+/*   Created: 2020/10/23 16:33:38 by afernand          #+#    #+#             */
+/*   Updated: 2020/10/26 17:17:06 by afernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-void ft_putnbr_base(int nbr, char *base);
-
-int main(void)
+void	ft_putnbr(int nb);
+int	main(void)
 {
-	int nbr;
-	char *base;
-
-	nbr = 10;
-	base = "0123456789ABCDEF";
-	ft_putnbr_base(nbr, base);
-	
-	return 0;
+	ft_putnbr(-2147483648);
+	return (0);
 }

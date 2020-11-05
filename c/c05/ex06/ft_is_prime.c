@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afernand <afernand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/03 19:21:23 by afernand          #+#    #+#             */
-/*   Updated: 2020/11/04 14:51:59 by afernand         ###   ########.fr       */
+/*   Created: 2020/11/05 01:37:59 by afernand          #+#    #+#             */
+/*   Updated: 2020/11/05 02:04:02 by afernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-void ft_putnbr_base(int nbr, char *base);
-
-int main(void)
+int	ft_is_prime(int nb)
 {
-	int nbr;
-	char *base;
+	int i;
+	int flag;
 
-	nbr = 10;
-	base = "0123456789ABCDEF";
-	ft_putnbr_base(nbr, base);
-	
-	return 0;
+	i = 2;
+	flag = 0;
+	while (i <= nb / 2)
+	{
+		if (nb % i == 0)
+		{
+			flag = 1;
+			break;
+		}
+	i++;
+	}
+    if (flag == 0)
+        return (1);
+    else
+        return(0);
 }
