@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afernand <afernand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/05 01:37:59 by afernand          #+#    #+#             */
-/*   Updated: 2020/11/05 11:21:06 by afernand         ###   ########.fr       */
+/*   Created: 2020/11/05 11:20:43 by afernand          #+#    #+#             */
+/*   Updated: 2020/11/05 12:00:37 by afernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_is_prime(int nb)
+int	ft_find_next_prime(int nb)
 {
 	int i;
 	int flag;
@@ -27,7 +27,10 @@ int	ft_is_prime(int nb)
 	i++;
 	}
     if (flag == 0)
-        return (1);
+        return (nb);
     else
-        return(0);
+    {
+        nb++;
+        return(ft_find_next_prime(nb));
+    }
 }

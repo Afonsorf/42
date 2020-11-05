@@ -8,7 +8,7 @@ int	main(void)
 
 	printf("\n");
 
-	nb = 2;
+	nb = 6;
 	printf("The number is: %i\n", nb);
 	printf("Is prime? 1 for yes, 0 for no: %d\n", ft_is_prime(nb));
 	printf("\n");

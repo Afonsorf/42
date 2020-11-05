@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afernand <afernand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/05 01:37:59 by afernand          #+#    #+#             */
-/*   Updated: 2020/11/05 11:21:06 by afernand         ###   ########.fr       */
+/*   Created: 2020/11/05 14:00:56 by afernand          #+#    #+#             */
+/*   Updated: 2020/11/05 16:02:30 by afernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_is_prime(int nb)
-{
-	int i;
-	int flag;
+#include <unistd.h>
 
-	i = 2;
-	flag = 0;
-	while (i <= nb / 2)
+int		main(int argc, char *argv[])
+{
+	int		i;
+	int		count;
+
+	i = 0;
+	count = argc;
+	while (argv[0][i] != 0)
 	{
-		if (nb % i == 0)
-		{
-			flag = 1;
-			break ;
-		}
-	i++;
+		write(1, &argv[0][i], 1);
+		i++;
 	}
-    if (flag == 0)
-        return (1);
-    else
-        return(0);
+	argv[0][i] = '\0';
+	write(1, "\n", 1);
+	return (0);
 }

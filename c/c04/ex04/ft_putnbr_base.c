@@ -6,7 +6,7 @@
 /*   By: afernand <afernand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 19:21:44 by afernand          #+#    #+#             */
-/*   Updated: 2020/11/04 23:47:01 by afernand         ###   ########.fr       */
+/*   Updated: 2020/11/05 12:46:49 by afernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ int		ft_strlen(char *str)
 	index = 0;
 	while (str[index])
 		index++;
-
 	return (index);
 }
 
@@ -46,13 +45,13 @@ bool	is_base_valid(char *str)
 		jndex = index + 1;
 		while (jndex < curr - str)
 			if (str[index] == str[jndex++])
-                return (false);
+				return (false);
 		index++;
 	}
 	return (true);
 }
 
-void    ft_putnbr_base_recursiva(int number, char *base, int baseleng)
+void	ft_putnbr_base_recursiva(int number, char *base, int baseleng)
 {
 	if (number == -2147483648)
 	{
@@ -71,7 +70,7 @@ void    ft_putnbr_base_recursiva(int number, char *base, int baseleng)
 	write(1, &(base[number % baseleng]), 1);
 }
 
-void    ft_putnbr_base(int nbr, char *base)
+void	ft_putnbr_base(int nbr, char *base)
 {
 	int	baseleng;
 
