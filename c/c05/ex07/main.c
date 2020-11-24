@@ -8,7 +8,7 @@ int	main(void)
 
 	printf("\n");
 
-	nb = 2;
+	nb = 13;
 	printf("The number is: %i\n", nb);
 	printf("The next prime number is: %d\n", ft_find_next_prime(nb));
 	printf("\n");
@@ -18,7 +18,7 @@ int	main(void)
 	printf("The next prime number is: %d\n", ft_find_next_prime(nb));
 	printf("\n");
 
-	nb = 38;
+	nb = 78;
 	printf("The number is: %i\n", nb);
 	printf("The next prime number is: %d\n", ft_find_next_prime(nb));
 	printf("\n");

@@ -5,14 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: afernand <afernand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/06 16:02:16 by afernand          #+#    #+#             */
-/*   Updated: 2020/11/06 16:39:40 by afernand         ###   ########.fr       */
+/*   Created: 2020/11/09 10:27:18 by afernand          #+#    #+#             */
+/*   Updated: 2020/11/12 13:22:07 by afernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdlib.h>
-#include <stdio.h>
 
 char	*ft_strdup(char *src)
 {
@@ -22,17 +20,14 @@ char	*ft_strdup(char *src)
 	i = 0;
 	while (src[i] != '\0')
 		i++;
-	if (!(str = malloc(sizeof(char) * i)))
+	if (!(str = malloc(sizeof(char) * (i + 1))))
 		return (0);
-	str = src;
+	i = 0;
+	while (src[i] != '\0')
+	{
+		str[i] = src[i];
+		i++;
+	}
+	str[i] = '\0';
 	return (str);
-}
-
-int		main(void)
-{
-	char *src;
-
-	src = "abcde";
-	printf("The command output is: %s\n", strdup(src));
-	printf("the function output is: %s\n", ft_strdup(src));
 }

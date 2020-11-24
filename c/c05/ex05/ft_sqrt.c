@@ -6,19 +6,20 @@
 /*   By: afernand <afernand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 15:01:34 by afernand          #+#    #+#             */
-/*   Updated: 2020/11/05 01:34:38 by afernand         ###   ########.fr       */
+/*   Updated: 2020/11/10 09:56:31 by afernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_sqrt(int nb)
+int		ft_sqrt(int nb)
 {
-	int i;
+	long long i;
 
 	i = 0;
 	if (nb <= 0)
 		return (0);
-	else
-		while (i * i < nb && i < 46340)
-			i++;
-	return (i);
+	while ((i * i) < nb)
+		++i;
+	if ((i * i) == nb)
+		return (i);
+	return (0);
 }
